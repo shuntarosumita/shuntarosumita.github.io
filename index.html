@@ -10,6 +10,21 @@
   </head>
   <body>
 
+    <svg display="none">
+      <symbol id="clipboard-data" viewBox="0 0 16 16">
+        <title id="clipboard-data-title">BibTeX</title>
+        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+        <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"/>
+      </symbol>
+      <symbol id="journal-text" viewBox="0 0 16 16">
+        <title id="journal-text-title">Comment</title>
+        <path d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1H2a2 2 0 0 1 2-2z"/>
+        <path d="M2 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H2zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H2zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H2z"/>
+        <path fill-rule="evenodd" d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+      </symbol>
+    </svg>
+
     <!-- Header -->
     <header class="bg-dark">
       <div class="custom-container-md text-center p-0">
@@ -132,8 +147,10 @@
             </div>
             <div class="col-md-10">
               <dl class="row">
+                <dt class="col-md-3">2020年8月12日</dt>
+                <dd class="col-md-9">[<a href="#publications">出版物</a>] 波数基底の多極子揺らぎ媒介超伝導に関する論文が<a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.2.033225" target="_blank">出版</a>されました．</dd>
                 <dt class="col-md-3">2020年7月21日</dt>
-                <dd class="col-md-9"><a href="https://arxiv.org/abs/2004.08086" target="_blank">波数基底の多極子揺らぎ媒介超伝導に関する論文</a>がPhys. Rev. Research誌にアクセプトされました．</dd>
+                <dd class="col-md-9">[<a href="#publications">出版物</a>] 波数基底の多極子揺らぎ媒介超伝導に関する論文がPhys. Rev. Research誌にアクセプトされました．</dd>
                 <dt class="col-md-3">2020年5月7日</dt>
                 <dd class="col-md-9">ウェブサイトを一新しました．</dd>
               </dl>
@@ -291,87 +308,444 @@
               <!-- Panel 01 -->
               <div class="tab-pane fade show active border border-top-0" id="panel-pub-paper" role="tabpanel" aria-labelledby="tab-pub-paper">
                 <div class="container p-3">
-                  <p>各論文をクリックすると簡単なコメントが表示されます．</p>
+                  <p>
+                    <svg class="bi bi-clipboard-data" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="clipboard-data-title">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#clipboard-data" />
+                    </svg>
+                    をクリックするとBibTeXの情報が，
+                    <svg class="bi bi-journal-text" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="journal-text-title">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#journal-text" />
+                    </svg>
+                    をクリックすると簡単なコメントが表示されます．
+                  </p>
                   <div class="list-group">
-                    <button type="button" class="btn list-group-item list-group-item-action" data-toggle="collapse" data-target="#pub-paper-007" aria-expanded="false" aria-controls="pub-paper-007">
+                    <div class="list-group-item">
                       <h5 class="mb-1">[7] Superconductivity induced by fluctuations of momentum-based multipoles</h5>
-                      <p class="mb-0"><u>Shuntaro Sumita</u> and Youichi Yanase</p>
-                      <p class="mb-0">To appear in Phys. Rev. Research. (<a href="https://arxiv.org/abs/2004.08086" target="_blank">arXiv:2004.08086.</a>)</p>
-                    </button>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                          <p class="mb-0"><u>Shuntaro Sumita</u> and Youichi Yanase</p>
+                          <p class="mb-0"><a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.2.033225" target="_blank">Phys. Rev. Research 2, 033225 (2020).</a> (<a href="https://arxiv.org/abs/2004.08086" target="_blank">arXiv:2004.08086.</a>)</p>
+                        </div>
+                        <div class="btn-group btn-group-toggle">
+                          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#pub-paper-007-bib">
+                            <svg class="bi bi-clipboard-data" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="clipboard-data-title">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#clipboard-data" />
+                            </svg>
+                          </button>
+                          <button type="button" class="btn btn-outline-primary" data-toggle="collapse" data-target="#pub-paper-007" aria-controls="pub-paper-007">
+                            <svg class="bi bi-journal-text" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="journal-text-title">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#journal-text" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal fade" id="pub-paper-007-bib" tabindex="-1" aria-labelledby="pub-paper-007-bib-label" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="pub-paper-007-bib-label">Get BibTeX</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <textarea class="form-control form-control-sm" rows="15" readonly>
+@article{PhysRevResearch.2.033225,
+  title = {Superconductivity induced by fluctuations of momentum-based multipoles},
+  author = {Sumita, Shuntaro and Yanase, Youichi},
+  journal = {Phys. Rev. Research},
+  volume = {2},
+  issue = {3},
+  pages = {033225},
+  numpages = {19},
+  year = {2020},
+  month = {Aug},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevResearch.2.033225},
+  url = {https://link.aps.org/doi/10.1103/PhysRevResearch.2.033225}
+}</textarea>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <span class="list-group-item list-group-item-success collapse" id="pub-paper-007">
                       <a href="https://arxiv.org/abs/1603.09440" target="_blank">1603.09440</a>や<a href="https://arxiv.org/abs/1702.08659" target="_blank">1702.08659</a>では磁気多極子秩序によって対称性が破れた相の超伝導状態に注目していたが，今回はむしろ"破れる寸前"の相に注目し，臨界点近くの多極子揺らぎによってどんな超伝導状態が現れるかを研究した．2015年の<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.115.207002" target="_blank">Kozii-Fuの研究</a>では，スピン軌道相互作用がある系において「奇パリティの電気的揺らぎによってスピン三重項超伝導が誘起される」という結果が得られていたが，磁気的揺らぎの場合や偶パリティの場合にはどうなるのかということが気になって調べ始めたのがきっかけ．Kozii-Fuではあまり議論されていなかった結晶場の効果なども考えている(特に，上記のスピン三重項超伝導は等方的な場合にはTcがかなり低いのに対し，結晶場を入れると高くなるケースがあることは重要な結果)．最初はコンパクトな論文にしようと思っていたのだが，分類表や候補物質を盛り込んでいるうちに妙に長くなってしまった．
                     </span>
-                    <button type="button" class="btn list-group-item list-group-item-action" data-toggle="collapse" data-target="#pub-paper-006" aria-expanded="false" aria-controls="pub-paper-006">
+
+                    <div class="list-group-item">
                       <h5 class="mb-1">[6] Insulator-Metal Transition and Topological Superconductivity in UTe2 from a First-Principles Calculation</h5>
-                      <p class="mb-0">Jun Ishizuka, <u>Shuntaro Sumita</u>, Akito Daido, and Youichi Yanase</p>
-                      <p class="mb-0"><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.123.217001" target="_blank">Phys. Rev. Lett. 123, 217001 (2019).</a> (<a href="https://arxiv.org/abs/1908.04004" target="_blank">arXiv:1908.04004.</a>)</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action" data-toggle="collapse" data-target="#pub-paper-005" aria-expanded="false" aria-controls="pub-paper-005">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                          <p class="mb-0">Jun Ishizuka, <u>Shuntaro Sumita</u>, Akito Daido, and Youichi Yanase</p>
+                          <p class="mb-0"><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.123.217001" target="_blank">Phys. Rev. Lett. 123, 217001 (2019).</a> (<a href="https://arxiv.org/abs/1908.04004" target="_blank">arXiv:1908.04004.</a>)</p>
+                        </div>
+                        <div class="btn-group btn-group-toggle">
+                          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#pub-paper-006-bib">
+                            <svg class="bi bi-clipboard-data" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="clipboard-data-title">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#clipboard-data" />
+                            </svg>
+                          </button>
+                          <button type="button" class="btn btn-outline-primary disabled" data-toggle="collapse" data-target="#pub-paper-006" aria-controls="pub-paper-006">
+                            <svg class="bi bi-journal-text" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="journal-text-title">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#journal-text" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal fade" id="pub-paper-006-bib" tabindex="-1" aria-labelledby="pub-paper-006-bib-label" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="pub-paper-006-bib-label">Get BibTeX</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <textarea class="form-control form-control-sm" rows="15" readonly>
+@article{PhysRevLett.123.217001,
+  title = {Insulator-Metal Transition and Topological Superconductivity in ${\mathrm{UTe}}_{2}$ from a First-Principles Calculation},
+  author = {Ishizuka, Jun and Sumita, Shuntaro and Daido, Akito and Yanase, Youichi},
+  journal = {Phys. Rev. Lett.},
+  volume = {123},
+  issue = {21},
+  pages = {217001},
+  numpages = {6},
+  year = {2019},
+  month = {Nov},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.123.217001},
+  url = {https://link.aps.org/doi/10.1103/PhysRevLett.123.217001}
+}</textarea>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="list-group-item">
                       <h5 class="mb-1">[5] Classification of topological crystalline superconducting nodes on high-symmetry lines: Point nodes, line nodes, and Bogoliubov Fermi surfaces</h5>
-                      <p class="mb-0"><u>Shuntaro Sumita</u>, Takuya Nomoto, Ken Shiozaki, and Youichi Yanase</p>
-                      <p class="mb-0"><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.99.134513" target="_blank">Phys. Rev. B 99, 134513 (2019).</a> (<a href="https://arxiv.org/abs/1811.08627" target="_blank">arXiv:1811.08627.</a>)</p>
-                    </button>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                          <p class="mb-0"><u>Shuntaro Sumita</u>, Takuya Nomoto, Ken Shiozaki, and Youichi Yanase</p>
+                          <p class="mb-0"><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.99.134513" target="_blank">Phys. Rev. B 99, 134513 (2019).</a> (<a href="https://arxiv.org/abs/1811.08627" target="_blank">arXiv:1811.08627.</a>)</p>
+                        </div>
+                        <div class="btn-group btn-group-toggle">
+                          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#pub-paper-005-bib">
+                            <svg class="bi bi-clipboard-data" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="clipboard-data-title">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#clipboard-data" />
+                            </svg>
+                          </button>
+                          <button type="button" class="btn btn-outline-primary" data-toggle="collapse" data-target="#pub-paper-005" aria-controls="pub-paper-005">
+                            <svg class="bi bi-journal-text" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="journal-text-title">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#journal-text" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal fade" id="pub-paper-005-bib" tabindex="-1" aria-labelledby="pub-paper-005-bib-label" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="pub-paper-005-bib-label">Get BibTeX</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <textarea class="form-control form-control-sm" rows="15" readonly>
+@article{PhysRevB.99.134513,
+  title = {Classification of topological crystalline superconducting nodes on high-symmetry lines: Point nodes, line nodes, and Bogoliubov Fermi surfaces},
+  author = {Sumita, Shuntaro and Nomoto, Takuya and Shiozaki, Ken and Yanase, Youichi},
+  journal = {Phys. Rev. B},
+  volume = {99},
+  issue = {13},
+  pages = {134513},
+  numpages = {19},
+  year = {2019},
+  month = {Apr},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.99.134513},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.99.134513}
+}</textarea>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <span class="list-group-item list-group-item-success collapse" id="pub-paper-005">
                       <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.118.207001" target="_blank">Micklitz-Norman (2017)</a>や<a href="https://arxiv.org/abs/1801.03293" target="_blank">1801.03293</a>ではブリルアンゾーンの高対称面上の超伝導ギャップ構造を群論的に分類し，線ノードが現れる条件を特定した．さらに，小林氏との共同研究(1711.06421)により，この線ノードはすべて0次元あるいは1次元のトポロジカル数によって特徴付けられることがClifford代数の知識を用いて明らかになった．一方で，ブリルアンゾーンの高対称軸上のギャップ構造については，群論的な分類は明らかとなっているが，それによって分かるノードがトポロジカル数によって特徴付けられているかは自明ではない．そこで，このような軸上の既約表現がもつemergentな対称性(emergent AZ class)に注目し，トポロジカル数の存在を明らかにした．結果として，群論的分類によって特定されるノードはすべてトポロジカル数によっても特徴付けられることが分かった．さらに論文では，系全体の対称性にも注目し，そのようなノードは点ノードなのか，あるいは線ノードや面ノードの一部なのかということも明らかにした．結構職人的な仕事になってしまったが個人的にはお気に入りの論文．
                     </span>
-                    <button type="button" class="btn list-group-item list-group-item-action" data-toggle="collapse" data-target="#pub-paper-004" aria-expanded="false" aria-controls="pub-paper-004">
+
+                    <div class="list-group-item">
                       <h5 class="mb-1">[4] Unconventional superconducting gap structure protected by space group symmetry</h5>
-                      <p class="mb-0"><u>Shuntaro Sumita</u> and Youichi Yanase</p>
-                      <p class="mb-0"><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.97.134512" target="_blank">Phys. Rev. B 97, 134512 (2018).</a> (<a href="https://arxiv.org/abs/1801.03293" target="_blank">arXiv:1801.03293.</a>)</p>
-                    </button>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                          <p class="mb-0"><u>Shuntaro Sumita</u> and Youichi Yanase</p>
+                          <p class="mb-0"><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.97.134512" target="_blank">Phys. Rev. B 97, 134512 (2018).</a> (<a href="https://arxiv.org/abs/1801.03293" target="_blank">arXiv:1801.03293.</a>)</p>
+                        </div>
+                        <div class="btn-group btn-group-toggle">
+                          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#pub-paper-004-bib">
+                            <svg class="bi bi-clipboard-data" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="clipboard-data-title">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#clipboard-data" />
+                            </svg>
+                          </button>
+                          <button type="button" class="btn btn-outline-primary" data-toggle="collapse" data-target="#pub-paper-004" aria-controls="pub-paper-004">
+                            <svg class="bi bi-journal-text" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="journal-text-title">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#journal-text" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal fade" id="pub-paper-004-bib" tabindex="-1" aria-labelledby="pub-paper-004-bib-label" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="pub-paper-004-bib-label">Get BibTeX</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <textarea class="form-control form-control-sm" rows="15" readonly>
+@article{PhysRevB.97.134512,
+  title = {Unconventional superconducting gap structure protected by space group symmetry},
+  author = {Sumita, Shuntaro and Yanase, Youichi},
+  journal = {Phys. Rev. B},
+  volume = {97},
+  issue = {13},
+  pages = {134512},
+  numpages = {16},
+  year = {2018},
+  month = {Apr},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.97.134512},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.97.134512}
+}</textarea>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <span class="list-group-item list-group-item-success collapse" id="pub-paper-004">
                       「超伝導対称性の分類」は超伝導の研究分野において重要な課題の一つであるが，その手法の一つとして，<a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.63.239" target="_blank">Sigrist-Uedaのレビュー(1991)</a>で有名な点群の既約表現による超伝導秩序変数の分類が挙げられる．しかし近年，この分類法によって導かれる超伝導ギャップ構造(= Bogoliubov準粒子スペクトルの励起エネルギー)は正しい結果を与えない場合があることが分かってきており，その代わりにブリルアンゾーンの各k点で許されるクーパー対波動関数の対称性を群論を用いて計算する厳密な超伝導ギャップの分類が提案されている．論文では，この厳密な手法を用いることで，ブリルアンゾーン内の高対称面(鏡映面または映進面)上に現れる線ノードの包括的な分類を行った．系に非共型対称性がある場合には，ブリルアンゾーン境界で(Sigrist-Uedaの分類では現れない)非自明な線ノードが現れうることがいくつかの例で知られていたが，今回の分類によってそのような非自明な現象が起こる条件を求めることができた．実はそのような研究は<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.118.207001" target="_blank">Micklitz-Norman (2017)</a>によって既になされていたが，我々の論文ではさらに空間反転をもちかつprimitiveな59個の空間群に対して上記の条件を当てはめ，分類表を作成した．また一方，ブリルアンゾーン内の高対称軸(n回回転軸)上のノードの分類については先行研究が少なかったため，共型な場合に限って分類を行った．結果として，3回あるいは6回回転対称性を持つ軸上では正常Bloch状態の全角運動量jzに依存したポイントノードの構造が現れることを見出した．また，UPt3, UBe13, SrPtAsといった現実の物質においてもこの非自明なギャップ構造の存在を示した．
                     </span>
-                    <button type="button" class="btn list-group-item list-group-item-action" data-toggle="collapse" data-target="#pub-paper-003" aria-expanded="false" aria-controls="pub-paper-003">
+
+                    <div class="list-group-item">
                       <h5 class="mb-1">[3] Symmetry-protected line nodes and Majorana flat bands in nodal crystalline superconductors</h5>
-                      <p class="mb-0">Shingo Kobayashi, <u>Shuntaro Sumita</u>, Youichi Yanase, and Masatoshi Sato</p>
-                      <p class="mb-0"><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.97.180504" target="_blank">Phys. Rev. B 97, 180504(R) (2018).</a> (<a href="https://arxiv.org/abs/1711.06421" target="_blank">arXiv:1711.06421.</a>)</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action" data-toggle="collapse" data-target="#pub-paper-002" aria-expanded="false" aria-controls="pub-paper-002">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                          <p class="mb-0">Shingo Kobayashi, <u>Shuntaro Sumita</u>, Youichi Yanase, and Masatoshi Sato</p>
+                          <p class="mb-0"><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.97.180504" target="_blank">Phys. Rev. B 97, 180504(R) (2018).</a> (<a href="https://arxiv.org/abs/1711.06421" target="_blank">arXiv:1711.06421.</a>)</p>
+                        </div>
+                        <div class="btn-group btn-group-toggle">
+                          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#pub-paper-003-bib">
+                            <svg class="bi bi-clipboard-data" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="clipboard-data-title">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#clipboard-data" />
+                            </svg>
+                          </button>
+                          <button type="button" class="btn btn-outline-primary disabled" data-toggle="collapse" data-target="#pub-paper-003" aria-controls="pub-paper-003">
+                            <svg class="bi bi-journal-text" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="journal-text-title">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#journal-text" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal fade" id="pub-paper-003-bib" tabindex="-1" aria-labelledby="pub-paper-003-bib-label" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="pub-paper-003-bib-label">Get BibTeX</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <textarea class="form-control form-control-sm" rows="15" readonly>
+@article{PhysRevB.97.180504,
+  title = {Symmetry-protected line nodes and Majorana flat bands in nodal crystalline superconductors},
+  author = {Kobayashi, Shingo and Sumita, Shuntaro and Yanase, Youichi and Sato, Masatoshi},
+  journal = {Phys. Rev. B},
+  volume = {97},
+  issue = {18},
+  pages = {180504},
+  numpages = {5},
+  year = {2018},
+  month = {May},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.97.180504},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.97.180504}
+}</textarea>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="list-group-item">
                       <h5 class="mb-1">[2] Multipole Superconductivity in Nonsymmorphic Sr2IrO4</h5>
-                      <p class="mb-0"><u>Shuntaro Sumita</u>, Takuya Nomoto, and Youichi Yanase</p>
-                      <p class="mb-0"><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.119.027001" target="_blank">Phys. Rev. Lett. 119, 027001 (2017).</a> (<a href="https://arxiv.org/abs/1702.08659" target="_blank">arXiv:1702.08659.</a>)</p>
-                    </button>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                          <p class="mb-0"><u>Shuntaro Sumita</u>, Takuya Nomoto, and Youichi Yanase</p>
+                          <p class="mb-0"><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.119.027001" target="_blank">Phys. Rev. Lett. 119, 027001 (2017).</a> (<a href="https://arxiv.org/abs/1702.08659" target="_blank">arXiv:1702.08659.</a>)</p>
+                        </div>
+                        <div class="btn-group btn-group-toggle">
+                          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#pub-paper-002-bib">
+                            <svg class="bi bi-clipboard-data" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="clipboard-data-title">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#clipboard-data" />
+                            </svg>
+                          </button>
+                          <button type="button" class="btn btn-outline-primary" data-toggle="collapse" data-target="#pub-paper-002" aria-controls="pub-paper-002">
+                            <svg class="bi bi-journal-text" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="journal-text-title">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#journal-text" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal fade" id="pub-paper-002-bib" tabindex="-1" aria-labelledby="pub-paper-002-bib-label" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="pub-paper-002-bib-label">Get BibTeX</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <textarea class="form-control form-control-sm" rows="15" readonly>
+@article{PhysRevLett.119.027001,
+  title = {Multipole Superconductivity in Nonsymmorphic ${\mathrm{Sr}}_{2}{\mathrm{IrO}}_{4}$},
+  author = {Sumita, Shuntaro and Nomoto, Takuya and Yanase, Youichi},
+  journal = {Phys. Rev. Lett.},
+  volume = {119},
+  issue = {2},
+  pages = {027001},
+  numpages = {6},
+  year = {2017},
+  month = {Jul},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.119.027001},
+  url = {https://link.aps.org/doi/10.1103/PhysRevLett.119.027001}
+}</textarea>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <span class="list-group-item list-group-item-success collapse" id="pub-paper-002">
                       Sr2IrO4は銅酸化物高温超伝導体とよく似た性質を持つ層状ペロブスカイト構造の絶縁体であり，電子ドープなどで超伝導が発現することが期待されている．また，面内で傾いた反強磁性構造を持つことが知られており，そのスタッキングの仕方が違う−++−, ++++, −+−+という3つ磁気構造が報告されている．このような背景から，磁気構造の中でも−++−と−+−+という2つに注目し，その秩序と共存する超伝導の性質を群論によるギャップ関数の解析および有効モデルを用いた数値計算といった2つの手法を組み合わせて調査した．その結果，−++−状態では磁気的な非共型対称性に守られた非自明な超伝導ギャップ構造が現れ，−+−+状態では磁場を必要としないFFLO超伝導が発現することを明らかにした．
                     </span>
-                    <button type="button" class="btn list-group-item list-group-item-action" data-toggle="collapse" data-target="#pub-paper-001" aria-expanded="false" aria-controls="pub-paper-001">
+
+                    <div class="list-group-item">
                       <h5 class="mb-1">[1] Superconductivity in magnetic multipole states</h5>
-                      <p class="mb-0"><u>Shuntaro Sumita</u> and Youichi Yanase</p>
-                      <p class="mb-0"><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.93.224507" target="_blank">Phys. Rev. B 93, 224507 (2016).</a> (<a href="https://arxiv.org/abs/1603.09440" target="_blank">arXiv:1603.09440.</a>)</p>
-                    </button>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                          <p class="mb-0"><u>Shuntaro Sumita</u> and Youichi Yanase</p>
+                          <p class="mb-0"><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.93.224507" target="_blank">Phys. Rev. B 93, 224507 (2016).</a> (<a href="https://arxiv.org/abs/1603.09440" target="_blank">arXiv:1603.09440.</a>)</p>
+                        </div>
+                        <div class="btn-group btn-group-toggle">
+                          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#pub-paper-001-bib">
+                            <svg class="bi bi-clipboard-data" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="clipboard-data-title">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#clipboard-data" />
+                            </svg>
+                          </button>
+                          <button type="button" class="btn btn-outline-primary" data-toggle="collapse" data-target="#pub-paper-001" aria-controls="pub-paper-001">
+                            <svg class="bi bi-journal-text" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-labelledby="journal-text-title">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#journal-text" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal fade" id="pub-paper-001-bib" tabindex="-1" aria-labelledby="pub-paper-001-bib-label" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="pub-paper-001-bib-label">Get BibTeX</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <textarea class="form-control form-control-sm" rows="15" readonly>
+@article{PhysRevB.93.224507,
+  title = {Superconductivity in magnetic multipole states},
+  author = {Sumita, Shuntaro and Yanase, Youichi},
+  journal = {Phys. Rev. B},
+  volume = {93},
+  issue = {22},
+  pages = {224507},
+  numpages = {12},
+  year = {2016},
+  month = {Jun},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.93.224507},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.93.224507}
+}</textarea>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <span class="list-group-item list-group-item-success collapse" id="pub-paper-001">
                       磁場中の超伝導状態はこれまでに多く議論されてきたテーマである．一方で，固体内での多極子自由度といったものが近年の凝縮系物理学で注目を集めている．そこで，「磁気多極子と共存する超伝導状態」の新奇な性質を調査することを目的とし，1次元ジグザグ格子という簡単なモデルを用いて平均場理論で解析を行った．その結果，磁気単極子状態では通常のBCS超伝導であるが，磁気双極子状態と磁気四極子状態ではそれぞれPDW超伝導・FFLO超伝導が発現するという非自明な性質を見出すことができた．
                     </span>
                   </div>
                 </div>
               </div>
+
               <!-- Panel 02 -->
               <div class="tab-pane fade border border-top-0" id="panel-pub-thesis" role="tabpanel" aria-labelledby="tab-pub-thesis">
                 <div class="container p-3">
                   <div class="list-group">
-                    <button type="button" class="btn list-group-item list-group-item-action" data-toggle="collapse" data-target="#pub-thesis-002" aria-expanded="false" aria-controls="pub-thesis-002">
+                    <div class="list-group-item">
                       <h5 class="mb-1">[博士論文] <a href="doc/publications/thesis/phd_thesis.pdf" target="_blank">Modern classification theory of superconducting gap nodes</a></h5>
                       <p class="mb-0">2020年3月23日 博士(理学) 取得</p>
-                      <!-- <p class="mb-0">京都大学 紅</p> -->
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action" data-toggle="collapse" data-target="#pub-thesis-001" aria-expanded="false" aria-controls="pub-thesis-001">
+                      <p class="mb-0">(<a href="https://doi.org/10.14989/doctor.k22236" target="_blank">京都大学学術情報リポジトリ 紅</a>)</p>
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[修士論文] <a href="doc/publications/thesis/ms_thesis.pdf" target="_blank">磁気多極子秩序と共存する超伝導の研究</a></h5>
                       <p class="mb-0">2017年3月23日 修士(理学) 取得</p>
-                    </button>
+                    </div>
                   </div>
                 </div>
               </div>
+
               <!-- Panel 03 -->
               <div class="tab-pane fade border border-top-0" id="panel-pub-rev_jp" role="tabpanel" aria-labelledby="tab-pub-rev_jp">
                 <div class="container p-3">
                   <div class="list-group">
-                    <button type="button" class="btn list-group-item list-group-item-action" data-toggle="collapse" data-target="#pub-rev_jp-001" aria-expanded="false" aria-controls="pub-rev_jp-001">
+                    <div class="list-group-item">
+                      <h5 class="mb-1">奇パリティ多極子相の分類学と電磁応答・超伝導</h5>
+                      <p class="mb-0">渡邉光，栁瀬 陽一，石塚 淳，金杉 翔太，大同 暁人，<u>角田 峻太郎</u>，下出 敦夫，塩見 雄毅</p>
+                      <p class="mb-0">「固体物理」 投稿中</p>
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">超伝導ギャップ構造の現代的分類理論</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，小林 伸吾</p>
-                      <p class="mb-0">「固体物理」 投稿準備中</p>
-                      <!-- <p class="mb-0">京都大学 紅</p> -->
-                    </button>
+                      <p class="mb-0">「固体物理」 採録決定済</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -403,48 +777,48 @@
                 <div class="container p-3">
                   <p><span class="mark">ハイライト表示</span>されたものは招待講演です．</p>
                   <div class="list-group">
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    <div class="list-group-item">
                       <h5 class="mb-1">[6] Classification theory of topological crystalline gapless superconductivity</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u></p>
                       <p class="mb-0">3rd EPiQS-TMS Alliance Workshop on Topological Phenomena in Quantum Materials</p>
                       <p class="mb-0">@ Kavli Institute for Theoretical Physics (Santa Barbara, USA)</p>
                       <p class="mb-0">October, 2019</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[5] Classification of topological crystalline superconducting nodes on high-symmetry line</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u>, Takuya Nomoto, Ken Shiozaki, and Youichi Yanase</p>
                       <p class="mb-0">APS March Meeting 2019</p>
                       <p class="mb-0">@ Boston Convention and Exhibition Center (Boston, USA)</p>
                       <p class="mb-0">L05.00003, March, 2019</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[4] Unconventional gap structure depending on angular momentum</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u> and Youichi Yanase</p>
                       <p class="mb-0">21st International Conference on Magnetism</p>
                       <p class="mb-0">@ Moscone Center (San Francisco, USA)</p>
                       <p class="mb-0">M9-02, July, 2018</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[3] Multipole Superconductivity and Unusual Gap Closing --- Application to Sr2IrO4 and UPt3 ---</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u> and Youichi Yanase</p>
                       <p class="mb-0">Novel Quantum States in Condensed Matter 2017</p>
                       <p class="mb-0">@ Kyoto Univ. (Kyoto, Japan)</p>
                       <p class="mb-0">November, 2017</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1 mark">[2] Superconductivity in higher-order magnetic multipole states of Sr2IrO4</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u></p>
                       <p class="mb-0">ETH-Amsterdam-Kyoto mini-workshop on multipole physics and ultrafast dynamics</p>
                       <p class="mb-0">@ Kyoto Univ. (Kyoto, Japan)</p>
                       <p class="mb-0">October, 2017</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[1] Superconductivity coexisting with magnetic multipole orders in Sr2IrO4</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u>, Takuya Nomoto, and Youichi Yanase</p>
                       <p class="mb-0">J-Physics 2017: International Workshop on Multipole Physics and Related Phenomena</p>
                       <p class="mb-0">@ Hachimantai Royal Hotel (Iwate, Japan)</p>
                       <p class="mb-0">September, 2017</p>
-                    </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -452,76 +826,76 @@
               <div class="tab-pane fade border border-top-0" id="panel-pre-inter-poster" role="tabpanel" aria-labelledby="tab-pre-inter-poster">
                 <div class="container p-3">
                   <div class="list-group">
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    <div class="list-group-item">
                       <h5 class="mb-1">[10] Classification of topological crystalline nodal superconductivity</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u></p>
                       <p class="mb-0">Trends in Theory of Correlated Materials 2019</p>
                       <p class="mb-0">@ Kyoto Univ. (Kyoto, Japan)</p>
                       <p class="mb-0">P13, October, 2019</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[9] Topological Gapless Superconductivity with Rotation Symmetry</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u>, Takuya Nomoto, Ken Shiozaki, and Youichi Yanase</p>
                       <p class="mb-0">International Conference on Strongly Correlated Electron Systems 2019</p>
                       <p class="mb-0">@ Okayama Convention Center (Okayama, Japan)</p>
                       <p class="mb-0">Tu-L-04, September, 2019</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[8] Topological classification of superconducting nodes on rotational axes</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u>, Takuya Nomoto, Ken Shiozaki, and Youichi Yanase</p>
                       <p class="mb-0">Spectroscopies in Novel Superconductors 2019</p>
                       <p class="mb-0">@ The Univ. of Tokyo (Tokyo, Japan)</p>
                       <p class="mb-0">P-Th-17, June, 2019</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[7] Topological classification of symmetry-protected superconducting point nodes</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u>, Takuya Nomoto, Ken Shiozaki, and Youichi Yanase</p>
                       <p class="mb-0">Trends in Theory of Correlated Materials 2018</p>
                       <p class="mb-0">@ Uni Dufour (Gen&egrave;ve, Switzerland)</p>
                       <p class="mb-0">5, October, 2018</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[6] Unconventional superconducting gap structure protected by space group symmetry</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u> and Youichi Yanase</p>
                       <p class="mb-0">12th International Conference on Materials and Mechanisms of Superconductivity</p>
                       <p class="mb-0">@ Beijing International Convention Center (Beijing, China)</p>
                       <p class="mb-0">Th-49, August, 2018</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[5] Weyl superconductivity depending on angular momentum</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u> and Youichi Yanase</p>
                       <p class="mb-0">TMS-EPiQS 2nd Alliance Workshop: Topological magnets and topological superconductors</p>
                       <p class="mb-0">@ Kyoto Univ. (Kyoto, Japan)</p>
                       <p class="mb-0">P-14, January, 2018</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[4] Multipole superconductivity in nonsymmorphic Sr2IrO4</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u>, Takuya Nomoto, and Youichi Yanase</p>
                       <p class="mb-0">International Conference on Strongly Correlated Electron Systems 2017</p>
                       <p class="mb-0">@ Clarion Congress Hotel (Prague, Czech Republic)</p>
                       <p class="mb-0">Tu-7-50, July, 2017</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[3] Superconductivity in magnetic multipole state</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u> and Youichi Yanase</p>
                       <p class="mb-0">International Conference on Strongly Correlated Electron Systems 2016</p>
                       <p class="mb-0">@ Zhejiang Univ. (Hangzhou, China)</p>
                       <p class="mb-0">Tu-P066, May, 2016</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[2] Fulde-Ferrell-Larkin-Ovchinnikov state induced by magnetic quadrupole order in zigzag chains</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u> and Youichi Yanase</p>
                       <p class="mb-0">CEMS Topical Meeting on Emergent 2D Materials</p>
                       <p class="mb-0">@ RIKEN (Saitama, Japan)</p>
                       <p class="mb-0">P17, December, 2015</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[1] Fulde-Ferrell-Larkin-Ovchinnikov state in zigzag chains</h5>
                       <p class="mb-0"><u>Shuntaro Sumita</u> and Youichi Yanase</p>
                       <p class="mb-0">International Symposium on Present and Future of Material Sciences</p>
                       <p class="mb-0">@ Osaka Univ. (Osaka, Japan)</p>
                       <p class="mb-0">44, November, 2015</p>
-                    </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -529,90 +903,90 @@
               <div class="tab-pane fade border border-top-0" id="panel-pre-domestic-oral" role="tabpanel" aria-labelledby="tab-pre-domestic-oral">
                 <div class="container p-3">
                   <div class="list-group">
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    <div class="list-group-item">
                       <h5 class="mb-1">[12] 多極子揺らぎに媒介される非従来型超伝導機構</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，栁瀬 陽一</p>
                       <p class="mb-0">日本物理学会 第75回年次大会</p>
                       <p class="mb-0">18pB21-3，2020年3月(<a href="https://www.jps.or.jp/activities/meetings/2020annual/corona/files/mail20200227.pdf" target="_blank">現地開催中止のため講演概要により発表成立</a>)</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[11] 波数基底の多極子揺らぎに媒介される超伝導</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，栁瀬 陽一</p>
                       <p class="mb-0">電子相関が生み出す超伝導現象の未解決問題と新しい潮流</p>
                       <p class="mb-0">@ 京都大学基礎物理学研究所</p>
                       <p class="mb-0">2019年10月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[10] 波数基底の多極子揺らぎに誘起される超伝導</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，栁瀬 陽一</p>
                       <p class="mb-0">日本物理学会 2019年秋季大会</p>
                       <p class="mb-0">@ 岐阜大学</p>
                       <p class="mb-0">12aB11-6，2019年9月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[9] 波数基底の多極子揺らぎが媒介する異方的超伝導</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，栁瀬 陽一</p>
                       <p class="mb-0">J-Physics 地域研究会─大阪</p>
                       <p class="mb-0">@ 大阪大学</p>
                       <p class="mb-0">2019年7月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[8] 高対称線上におけるトポロジカル結晶超伝導ノードの分類</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，野本 拓也，塩崎 謙，栁瀬 陽一</p>
                       <p class="mb-0">日本物理学会 第74回年次大会</p>
                       <p class="mb-0">@ 九州大学</p>
                       <p class="mb-0">15aS301-6，2019年3月</p>
                       <p class="mb-0"><b><a class="text-success" href="https://www.jps.or.jp/activities/awards/gakusei/2019a-student-presentation-award.php" target="_blank">学生優秀発表賞(領域8)</a></b></p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[7] 3回回転対称性に守られた角運動量に依存するノードのある超伝導</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，栁瀬 陽一</p>
                       <p class="mb-0">電子相関が生み出す新規な秩序と超伝導現象：トポロジー，液晶状態，動的現象</p>
                       <p class="mb-0">@ 京都大学基礎物理学研究所</p>
                       <p class="mb-0">2018年5月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[6] 3回回転対称性がある系における角運動量に依存するWeyl超伝導状態</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，栁瀬 陽一</p>
                       <p class="mb-0">日本物理学会 第73回年次大会</p>
                       <p class="mb-0">@ 東京理科大学</p>
                       <p class="mb-0">23pB101-2，2018年3月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[5] 奇パリティ拡張磁気多極子状態におけるFFLO超伝導</h5>
                       <p class="mb-0"><u>角田 峻太郎</u></p>
                       <p class="mb-0">J-Physicsトピカルミーティング「どう創る？：キラル磁性体と拡張多極子」</p>
                       <p class="mb-0">@ 兵庫県立淡路夢舞台国際会議場</p>
                       <p class="mb-0">2018年1月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[4] 空間群によって守られる非自明な超伝導ギャップノード</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，栁瀬 陽一</p>
                       <p class="mb-0">日本物理学会 2017年秋季大会</p>
                       <p class="mb-0">@ 岩手大学</p>
                       <p class="mb-0">21aF21-13, 2017年9月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[3] イリジウム酸化物Sr2IrO4における多極子超伝導</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，野本 拓也，栁瀬 陽一</p>
                       <p class="mb-0">超伝導研究の最先端：多自由度，非平衡，電子相関，トポロジー，人工制御</p>
                       <p class="mb-0">@ 京都大学基礎物理学研究所</p>
                       <p class="mb-0">2017年6月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[2] Sr2IrO4における非共型対称性に守られたノードのある超伝導と磁気四極子によるFFLO超伝導</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，野本 拓也，栁瀬 陽一</p>
                       <p class="mb-0">日本物理学会 第72回年次大会</p>
                       <p class="mb-0">@ 大阪大学</p>
                       <p class="mb-0">17pL22-6，2017年3月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[1] 磁気多極子状態における超伝導</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，栁瀬 陽一</p>
                       <p class="mb-0">日本物理学会 第71回年次大会</p>
                       <p class="mb-0">@ 東北学院大学</p>
                       <p class="mb-0">21aBM-3，2016年3月</p>
-                    </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -620,78 +994,78 @@
               <div class="tab-pane fade border border-top-0" id="panel-pre-domestic-poster" role="tabpanel" aria-labelledby="tab-pre-domestic-poster">
                 <div class="container p-3">
                   <div class="list-group">
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    <div class="list-group-item">
                       <h5 class="mb-1">[10] 波数基底の多極子揺らぎに誘起される超伝導ペアリングの分類</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，栁瀬 陽一</p>
                       <p class="mb-0">「J-Physics: 多極子伝導系の物理」令和元年度領域全体会議</p>
                       <p class="mb-0">@ 神戸大学</p>
                       <p class="mb-0">P04，2020年1月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[9] クラスター磁気多極子揺らぎに媒介される超伝導機構</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，栁瀬 陽一</p>
                       <p class="mb-0">日本物理学会 2019年秋季大会</p>
                       <p class="mb-0">@ 岐阜大学</p>
                       <p class="mb-0">11pPSA-47，2019年9月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[8] 高対称線上におけるトポロジカル結晶超伝導ノードの分類</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，野本 拓也，塩崎 謙，栁瀬 陽一</p>
                       <p class="mb-0">「トポロジーが紡ぐ物質科学のフロンティア」第4回領域研究会</p>
                       <p class="mb-0">@ 名古屋大学</p>
                       <p class="mb-0">PB-33，2019年1月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[7] 奇パリティ磁気多極子揺らぎに誘起される超伝導</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，栁瀬 陽一</p>
                       <p class="mb-0">日本物理学会 2018年秋季大会</p>
                       <p class="mb-0">@ 同志社大学</p>
                       <p class="mb-0">10pPSB-81，2018年9月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[6] 空間群対称性に守られた非自明超伝導ギャップ構造</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，栁瀬 陽一</p>
                       <p class="mb-0">「J-Physics: 多極子伝導系の物理」平成30年度領域全体会議</p>
                       <p class="mb-0">@ 東北大学金属材料研究所</p>
                       <p class="mb-0">P07，2018年5月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[5] 角運動量jzに依存する超伝導ポイントノード --- UPt3, UBe13, SrPtAsなどへの適用 ---</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，栁瀬 陽一</p>
                       <p class="mb-0">「J-Physics: 多極子伝導系の物理」平成29年度領域全体会議</p>
                       <p class="mb-0">@ 東京大学物性研究所</p>
                       <p class="mb-0">P12，2018年3月</p>
                       <p class="mb-0 text-success"><b>最優秀ポスター賞</b></p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[4] Multipole superconductivity in Sr2IrO4: Symmetry-protected nodal superconductivity and FFLO superconductivity</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，野本 拓也，栁瀬 陽一</p>
                       <p class="mb-0">第10回 物性科学領域横断研究会</p>
                       <p class="mb-0">@ 神戸大学</p>
                       <p class="mb-0">35，2016年12月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[3] イリジウム酸化物における非共型対称性に守られたラインノードとFFLO超伝導</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，野本 拓也，栁瀬 陽一</p>
                       <p class="mb-0">超伝導研究の最先端：多自由度，非平衡，電子相関，トポロジー</p>
                       <p class="mb-0">@ 京都大学基礎物理学研究所</p>
                       <p class="mb-0">P07，2016年10月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[2] 非共型結晶に対する超伝導対称性の分類</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，栁瀬 陽一</p>
                       <p class="mb-0">日本物理学会 2016年秋季大会</p>
                       <p class="mb-0">@ 金沢大学</p>
                       <p class="mb-0">15aPS-3，2016年9月</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[1] 磁気多極子秩序と共存する超伝導状態</h5>
                       <p class="mb-0"><u>角田 峻太郎</u>，栁瀬 陽一</p>
                       <p class="mb-0">「J-Physics: 多極子伝導系の物理」平成28年度領域全体会議</p>
                       <p class="mb-0">@ 北海道大学</p>
                       <p class="mb-0">P48，2016年5月</p>
                       <p class="mb-0 text-success"><b>最優秀ポスター賞</b></p>
-                    </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -699,36 +1073,36 @@
               <div class="tab-pane fade border border-top-0" id="panel-pre-seminar" role="tabpanel" aria-labelledby="tab-pre-seminar">
                 <div class="container p-3">
                   <div class="list-group">
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    <div class="list-group-item">
                       <h5 class="mb-1">[6] トポロジカル結晶ノーダル超伝導の分類理論</h5>
                       <p class="mb-0">Prof. Akira Furusaki's group, RIKEN</p>
                       <p class="mb-0">November 2019</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[5] Topological Gapless Points in Superconductors: from the viewpoint of symmetry</h5>
                       <p class="mb-0">Physics Colloquium, University of Wisconsin-Milwaukee</p>
                       <p class="mb-0">March 2019</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[4] 高対称線上の超伝導ノードのトポロジカル的分類</h5>
                       <p class="mb-0">Assoc. Prof. Haruki Watanabe's group, The University of Tokyo</p>
                       <p class="mb-0">February 2019</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[3] 高対称軸上におけるトポロジカル結晶超伝導ノードの分類：点ノード，線ノード，面ノード</h5>
                       <p class="mb-0">Prof. Hiroshi Kontani's group, Nagoya University</p>
                       <p class="mb-0">December 2018</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[2] Classification of topological crystalline superconducting nodes on high-symmetry axis</h5>
                       <p class="mb-0">Prof. Yasuhiro Hatsugai's group, University of Tsukuba</p>
                       <p class="mb-0">November 2018</p>
-                    </button>
-                    <button type="button" class="btn list-group-item list-group-item-action">
+                    </div>
+                    <div class="list-group-item">
                       <h5 class="mb-1">[1] Classification of unconventional symmetry-protected superconducting gap structure</h5>
                       <p class="mb-0">Prof. Manfred Sigrist's group, ETH Z&uuml;rich</p>
                       <p class="mb-0">June 2018</p>
-                    </button>
+                    </div>
                   </div>
                 </div>
               </div>
